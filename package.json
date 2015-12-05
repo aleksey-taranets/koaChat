@@ -1,0 +1,35 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "koa + react",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksey-taranets/koaChat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksey-taranets/koaChat/issues"
+  },
+  "homepage": "https://github.com/aleksey-taranets/koaChat#readme",
+  "dependencies": {
+    "co-body": "^4.0.0",
+    "jquery": "^2.1.4",
+    "koa": "^1.1.2",
+    "koa-route": "^2.4.2",
+    "koa-static": "^1.5.2",
+    "mongoose": "^4.2.9",
+    "route": "^0.2.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.9"
+  }
+}

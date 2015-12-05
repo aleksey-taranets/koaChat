@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+    <div id="register">
+        <form action="/api/register">
+            <input type="text" name="username" />
+            <input type="text" name="password" />
+            <input type="text" name="password_confirmation" />
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div id="login">
+        <form action="/api/login">
+            <input type="text" name="username" />
+            <input type="text" name="password" />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <!--<script type="text/javascript" src="bundle.js"></script>-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        (function($){
+            $(function(){
+
+                $('form').on('submit', function(e){
+                    e.preventDefault();
+                    var formData = $(this).serialize();
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        method: 'POST',
+                        data: formData,
+                        success: function(data){
+                            console.log('success', data);
+                        },
+                        error: function(res){
+                            console.log(res.responseText);
+                        }
+                    });
+                });
+
+
+            });
+        })(jQuery)
+    </script>
+</body>
+</html>
